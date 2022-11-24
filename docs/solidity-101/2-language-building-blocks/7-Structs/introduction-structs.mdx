@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Solidity offers a variety of data types, such as addresses, uints, bytes, strings, etc.
 
-Structs are a great way to store different data types together. You can think of a struct as an improved array, because regular arrays in Solidity only allow 1 data type.
+Structs are a great way to store different data types together. You can think of a struct as an improved array, because regular Solidity arrays only allow 1 data type.
 
 ## Example
 
@@ -46,3 +46,6 @@ contract SimpleStorage {
 In order to access the data inside the struct, we need to use the access operator `.`, like so: `structName.member`.<br />
 
 In our contract code, we used the structName `DataStruct`. The member name for the uint was `storedData`. The function `getDataStructNumber` was able to access and return the uint, because we used the . operator: `return data.storedData;`.
+
+One thing to note is that you can keep passing new data to your struct, but it will only return the latest submitted data when you call a return function. <br />
+When you need to store data into different structs, consider using an [`array of structs`](/solidity-101/2-language-building-blocks/6-Mapping-and-Arrays/introduction-mappings-and-arrays.mdx).

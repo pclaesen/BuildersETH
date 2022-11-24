@@ -4,4 +4,124 @@ sidebar_position: 1
 
 # Introduction
 
-Add stuff.
+Solidity supports the following operator types:
+
+1. Arithmetic operators
+2. Logical operators
+2. Comparison operators
+3. Assignment operators
+4. Conditional operators
+
+# 1. Arithmetic operators
+These operators can be used for calculations and math in Solidity.
+
+There are 7 types of arithmetic operators:
+ - Addition: `+`
+ - Substraction: `-`
+ - Increment: `++`
+ - Decrement: `--`
+ - Multiplication: `*`
+ - Division: `/`
+ - Modulus: `%`
+
+Below you will find a basic example of each arithmetic operator. We will use the SimpleStorage contract example.
+
+### Addition:
+```solidity
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity 0.8.13;
+
+contract SimpleStorage {
+    uint storedData;
+
+    function set(uint x) public {
+        storedData = x + 5; //use the Addition operator to add 5 to the variable x
+    }
+
+    function get() public view returns (uint) {
+        return storedData; // this will return x + 5, for example 8 (3 + 5)
+    }
+}
+```
+
+### Substraction:
+```solidity
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity 0.8.13;
+
+contract SimpleStorage {
+    uint storedData;
+
+    function set(uint x) public {
+        storedData = x - 5; //use the Substraction operator to substract 5 from the variable x
+    }
+
+    function get() public view returns (uint) {
+        return storedData; // this will return x - 5, for example 10 (15 - 5)
+    }
+}
+```
+
+### Increment:
+
+The increment operator `++` increases the current integer value by one (1).
+This is often used in a `for loop`.
+
+```solidity
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity 0.8.13;
+
+contract SimpleStorage {
+    uint storedData;
+
+    function set(uint x) public {
+        storedData = ++x; //use the Increment operator to increase the value of x by one
+    }
+
+    function get() public view returns (uint) {
+        return storedData; // this will return x +1, for example 6 (5 + 1)
+    }
+}
+```
+
+### Decrement:
+
+The decrement operator `--` decreases the current integer value by one (1).
+
+```solidity
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity 0.8.13;
+
+contract SimpleStorage {
+    uint storedData;
+
+    function set(uint x) public {
+        storedData = --x; //use the Decrement operator to decrease the value of x by one
+    }
+
+    function get() public view returns (uint) {
+        return storedData; // this will return x -1, for example 4 (5 - 1)
+    }
+}
+```
+
+### Multiplication:
+
+The Multiplication operator `*` multiplies 2 integers.
+
+```solidity
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity 0.8.13;
+
+contract SimpleStorage {
+    uint storedData;
+
+    function set(uint x, uint y) public {
+        storedData = x * y; //use the Multiplication operator to multiple x and y
+    }
+
+    function get() public view returns (uint) {
+        return storedData; // this will return x * y, for example 20 (4 * 5)
+    }
+}
+```
